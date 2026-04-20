@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hassan Naboulsi — UC Berkeley. Embedded systems, FPGA, hardware testing.">
+    <title>Hassan Naboulsi — UC Berkeley</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#about" class="nav-logo">naboulsi.me</a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger-icon">
+                <span></span><span></span><span></span>
+            </span>
+            <span>MENU</span>
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="#about"      class="nav-link">About Me</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <!-- <li><a href="#projects"   class="nav-link">Projects</a></li> -->
+            <li><a href="#aviation"   class="nav-link">Aviation</a></li>
+            <li><a href="#leadership" class="nav-link">Leadership</a></li>
+            <li><a href="#skills"     class="nav-link">Skills</a></li>
+            <li><a href="#contact"    class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/hnaboulsi" target="_blank" rel="noopener noreferrer"
+               class="nav-icon-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO + ABOUT (merged) -->
+<section id="about" class="hero-about">
+    <div class="container">
+        <div class="ha-grid">
+            <!-- LEFT: name + actions -->
+            <div class="ha-left">
+                <h1 class="hero-title">Hassan<br>Naboulsi</h1>
+                <div class="ha-status">
+                    <span class="ha-status-item">Graduating December 2027 — UC Berkeley, Electrical Engineering &amp; Computer Sciences</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="mailto:naboulsi@berkeley.edu" class="btn btn-primary">
+                        naboulsi@berkeley.edu
+                    </a>
+                    <a href="https://linkedin.com/in/hnaboulsi" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- RIGHT: short bio -->
+            <div class="ha-right fade-in">
+                <p class="about-p">
+                    Junior at UC Berkeley studying Electrical Engineering and Computer Science.
+                    I gravitate toward the boundary of software and hardware, because it's where code controls something real.
+                    I've built AI benchmarking tools, tested power systems in France, and fabricated paper batteries in a lab in Tennessee.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title">Experience.</h2>
+        <div class="exp-list">
+
+            <!-- ChipChop -->
+            <div class="exp-card fade-in">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-role">Software Engineering Intern</div>
+                        <div class="exp-company">
+                            ChipChop (Berkeley SkyDeck)
+                            <span class="sep">·</span>
+                            Berkeley, CA
+                        </div>
+                    </div>
+                    <div class="exp-date">Jan 2026 — Present <span class="now">CURRENT</span></div>
+                </div>
+                <ul class="exp-details">
+                    <li>Built a benchmarking tool in Python to evaluate and compare AI models on code generation tasks; used automated simulation to score outputs and track pass rates across 3 providers</li>
+                    <li>Developed a memory system that persists project context across sessions for a multi-agent AI coding assistant; covered with 29 automated tests</li>
+                    <li>Refactored 9 AI agents to support swappable model backends (cloud and local); built setup automation and API key management so engineers could switch providers without touching config files</li>
+                </ul>
+                <figure class="exp-photo">
+                    <img src="images/ChipChop_Project_Memory.png" alt="ChipChop Orchestrator project memory output" loading="lazy">
+                    <figcaption>Project memory I built for the ChipChop agent — persists RTL design state across sessions</figcaption>
+                </figure>
+            </div>
+
+            <!-- Virginia Tech NSF REU -->
+            <div class="exp-card fade-in">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-role">Research Intern (NSF REU)</div>
+                        <div class="exp-company">
+                            Virginia Tech
+                            <span class="sep">·</span>
+                            Grenoble, France
+                        </div>
+                    </div>
+                    <div class="exp-date">Jun 2025 — Aug 2025</div>
+                </div>
+                <ul class="exp-details">
+                    <li>Collected household energy consumption data via 10+ Arduino-based sensors (C++) and parsed 120+ CSV profiles in Python for replay through a grid emulator, automating configuration across 30+ test scenarios</li>
+                    <li>Built MQTT logging pipeline in Python to capture and timestamp real-time power meter data across week-long grid simulation sessions</li>
+                    <li>Analyzed smart meter measurement accuracy across 30+ simulated load profiles; confirmed sub-1% power reading error against emulator setpoints</li>
+                </ul>
+                <figure class="exp-photo">
+                    <img src="images/European_Synchrotron_Radiation_Facility.png" alt="European Synchrotron Radiation Facility interior" loading="lazy">
+                    <figcaption>Lab photography wasn't permitted inside French national labs, so this is from a tour of the nearby European Synchrotron Radiation Facility.</figcaption>
+                </figure>
+            </div>
+
+            <!-- UT Knoxville NSF REU -->
+            <div class="exp-card fade-in">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-role">Research Intern (NSF REU)</div>
+                        <div class="exp-company">
+                            University of Tennessee
+                            <span class="sep">·</span>
+                            Knoxville, TN
+                        </div>
+                    </div>
+                    <div class="exp-date">May 2024 — Jul 2024</div>
+                </div>
+                <ul class="exp-details">
+                    <li>Fabricated flexible paper battery prototypes by hand-assembling graphite and zinc electrode layers; characterized output at 0.91V / 0.3 mA against reference targets of 1.2V / 0.5mA</li>
+                    <li>Evaluated aerodynamic deployment shapes for water-landing sensor housings; validated paper seed geometry as optimal design through drop testing</li>
+                    <li>Wrote C++ firmware for Arduino-based sensor system sampling water quality parameters (pH, turbidity) every 60 seconds and transmitting readings wirelessly to a monitoring interface</li>
+                </ul>
+                <figure class="exp-photo">
+                    <img src="images/First_Test_for_Fabricating_the_Paper_Battery.png" alt="Multimeter reading from hand-fabricated paper battery" loading="lazy">
+                    <figcaption>First voltage reading from a hand-fabricated paper battery — 0.468 V</figcaption>
+                </figure>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS (Hidden until further notice)
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Projects.</h2>
+        <div class="projects-list">
+
+            <div class="project-row fade-in">
+                <div class="project-meta">
+                    UC Berkeley<br>
+                    2025
+                </div>
+                <div class="project-body">
+                    <div class="project-title">Hands-On PCB Engineering</div>
+                    <div class="project-photo-placeholder" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="project-row fade-in">
+                <div class="project-meta">
+                    Stanford Postdoc Research<br>
+                    2024
+                </div>
+                <div class="project-body">
+                    <div class="project-title">Li-Ion Thermal Mitigation</div>
+                    <div class="project-photo-placeholder" aria-hidden="true"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+-->
+
+<!-- AVIATION -->
+<section id="aviation" class="section">
+    <div class="container">
+        <h2 class="section-title">Plane enthusiast.</h2>
+        <p class="aviation-sub">
+            Airports, museums, and anything with wings.
+        </p>
+        <div class="gallery-grid fade-in">
+            <div class="gallery-item"><img src="assets/klm-787.png"         alt="Condor A330neo"          loading="lazy"><span class="gallery-caption">Condor A330neo — FRA</span></div>
+            <div class="gallery-item"><img src="assets/airfrance-777.png"   alt="Air France 777"          loading="lazy"><span class="gallery-caption">Air France 777 — SFO</span></div>
+            <div class="gallery-item"><img src="assets/sr71-blackbird.png"  alt="SR-71 Blackbird"         loading="lazy"><span class="gallery-caption">SR-71 Blackbird — Udvar-Hazy</span></div>
+            <div class="gallery-item"><img src="assets/lufthansa-747.png"   alt="Lufthansa 747-8"         loading="lazy"><span class="gallery-caption">Lufthansa 747-8 — FRA</span></div>
+            <div class="gallery-item"><img src="assets/emirates-a380.png"   alt="Emirates A380"           loading="lazy"><span class="gallery-caption">Emirates A380 — SFO</span></div>
+            <div class="gallery-item"><img src="assets/shuttle-front.png"   alt="Space Shuttle Discovery" loading="lazy"><span class="gallery-caption">Space Shuttle Discovery — Udvar-Hazy</span></div>
+            <div class="gallery-item"><img src="assets/qatar-a320.png"      alt="Qatar A320"              loading="lazy"><span class="gallery-caption">Qatar A320 — SHJ</span></div>
+            <div class="gallery-item"><img src="assets/southwest-737.png"   alt="Southwest 737"           loading="lazy"><span class="gallery-caption">Southwest 737 — SJC</span></div>
+            <div class="gallery-item"><img src="assets/alaska-e190.png"     alt="Alaska E190"             loading="lazy"><span class="gallery-caption">Alaska E190 — SFO</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership" class="section">
+    <div class="container">
+        <h2 class="section-title">Leadership.</h2>
+        <div class="leadership-list">
+
+            <div class="lead-row fade-in">
+                <div class="lead-meta">Co-Director<br>2024</div>
+                <div>
+                    <div class="lead-title">De Anza Hacks 2.5 & 3.0</div>
+                    <a class="lead-link" href="https://lavozdeanza.com/features/2024/06/07/de-anza-hackathon-returns-for-spring-and-comes-with-a-twist/"
+                       target="_blank" rel="noopener noreferrer">College news coverage →</a>
+                    <ul class="lead-details">
+                        <li>Directed hardware-focused hackathons with 300+ signups; secured $20,000+ in sponsorships from OpenAI, Desmos, Red Bull, and Wolfram</li>
+                        <li>Led organizing team and secured speakers from Stanford; managed 200+ participants</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lead-row fade-in">
+                <div class="lead-meta">President<br>2023–2024</div>
+                <div>
+                    <div class="lead-title">Developers' Guild — De Anza College</div>
+                    <ul class="lead-details">
+                        <li>Led De Anza's largest computer-engineering club — 500+ members</li>
+                        <li>Organized technical conferences with 100+ attendees; speakers from Google and other tech companies</li>
+                        <li>Mentored 60+ students on technical projects — debugging, system design, tooling</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lead-row fade-in">
+                <div class="lead-meta">Volunteer<br>Instructor</div>
+                <div>
+                    <div class="lead-title">Steel City Codes</div>
+                    <ul class="lead-details">
+                        <li>Taught intermediate and advanced Python and Java to 50+ elementary and middle-school students</li>
+                        <li>Created curriculum: project-based exercises and coding challenges</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="section-title">Skills.</h2>
+        <div class="skills-list">
+            <div class="skill-row fade-in">
+                <div class="skill-label">Languages</div>
+                <div class="skill-items">
+                    Python, C / C++, Java, Bash
+                </div>
+            </div>
+            <div class="skill-row fade-in">
+                <div class="skill-label">Libraries</div>
+                <div class="skill-items">
+                    Pandas, Pytest, NumPy, Matplotlib
+                </div>
+            </div>
+            <div class="skill-row fade-in">
+                <div class="skill-label">Embedded / HDL</div>
+                <div class="skill-items">
+                    Verilog, Vivado, Arduino / C++, KiCad, LTspice, PCB layout
+                </div>
+            </div>
+            <div class="skill-row fade-in">
+                <div class="skill-label">Workflow</div>
+                <div class="skill-items">
+                    Git, Linux, JIRA, Confluence
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PERSONAL / OUTRO -->
+<section id="outro" class="section">
+    <div class="container">
+        <div class="outro-content fade-in">
+            <p class="about-p">
+                <strong>Interests:</strong> Commercial aviation, space exploration, and travel hacking (I've used points to visit places I otherwise never would have). Outside of engineering, I care for my pet fish, find new coffee shops, and drink too much diet soda. Thanks for reading — feel free to reach out if anything caught your eye :)
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <div class="container">
+            <div class="contact-grid">
+            <div>
+                <h2 class="contact-headline">
+                    Get in touch.
+                </h2>
+                <p class="contact-sub">
+                    Best way to reach me is email. I'm always on top of my inbox.
+                </p>
+                <div class="contact-actions">
+                    <a href="mailto:naboulsi@berkeley.edu" class="btn btn-primary">
+                        Email me
+                        <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 8h10M9 3l5 5-5 5"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/hnaboulsi" target="_blank" rel="noopener noreferrer"
+                       class="btn btn-ghost">LinkedIn</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-row">
+                    <span class="contact-k">Email</span>
+                    <span class="contact-v"><a href="mailto:naboulsi@berkeley.edu">naboulsi@berkeley.edu</a></span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-k">Based</span>
+                    <span class="contact-v">Berkeley, CA · PT (UTC−8)</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-k">Reply</span>
+                    <span class="contact-v">Usually within 24 h</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX (aviation only) -->
+<div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <figure class="lightbox-figure">
+        <img alt="">
+        <figcaption></figcaption>
+    </figure>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <span>Last updated Apr 2026. If you read this far, please reach out and connect!</span>
+    </div>
+</footer>
+
+<script>
+// ===== Nav toggle =====
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu   = document.querySelector('.nav-menu');
+const navLinks  = document.querySelectorAll('.nav-link');
+
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+navLinks.forEach(l => l.addEventListener('click', () => {
+    navToggle.classList.remove('active');
+    navMenu.classList.remove('active');
+}));
+
+// ===== Fade-in on scroll =====
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// ===== Active nav link =====
+const sections = document.querySelectorAll('section[id]');
+function updateActive() {
+    const y = window.pageYOffset + window.innerHeight * 0.38;
+    let cur = sections[0]?.id;
+    sections.forEach(s => { if (y >= s.offsetTop) cur = s.id; });
+    if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4)
+        cur = sections[sections.length - 1]?.id;
+    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur));
+}
+window.addEventListener('scroll', updateActive);
+updateActive();
+
+// ===== Lightbox (aviation only) =====
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const lightboxCaption = lightbox.querySelector('figcaption');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+function openLightbox(src, alt, caption) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightboxCaption.textContent = caption || '';
+    lightbox.hidden = false;
+    document.body.classList.add('lightbox-open');
+    requestAnimationFrame(() => lightbox.classList.add('open'));
+}
+function closeLightbox() {
+    if (lightbox.hidden) return;
+    lightbox.classList.remove('open');
+    const done = () => {
+        lightbox.hidden = true;
+        lightboxImg.src = '';
+        document.body.classList.remove('lightbox-open');
+        lightbox.removeEventListener('transitionend', done);
+    };
+    lightbox.addEventListener('transitionend', done);
+}
+
+document.querySelectorAll('.gallery-item').forEach(tile => {
+    tile.addEventListener('click', () => {
+        const img = tile.querySelector('img');
+        const cap = tile.querySelector('.gallery-caption');
+        if (!img) return;
+        openLightbox(img.src, img.alt, cap ? cap.textContent : '');
+    });
+});
+document.querySelectorAll('.exp-photo img').forEach(img => {
+    img.addEventListener('click', () => {
+        const fig = img.closest('.exp-photo');
+        const cap = fig ? fig.querySelector('figcaption') : null;
+        openLightbox(img.src, img.alt, cap ? cap.textContent : '');
+    });
+});
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+</body>
+</html>
